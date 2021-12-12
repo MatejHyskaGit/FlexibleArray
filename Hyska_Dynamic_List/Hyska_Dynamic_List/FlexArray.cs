@@ -10,6 +10,7 @@ namespace Hyska_Dynamic_List
     public class FlexArray : IEnumerable, IFlexArray
     {
         protected object[] _array = new object[0];
+
         public int Count
         {
             get
@@ -28,7 +29,7 @@ namespace Hyska_Dynamic_List
         public void Add(object o)
         {
             Resize(ref _array, Length + 1);
-            _array[Length - 1] = o;
+            Set(Length-1, o);
         }
 
         public object Get(int index)
@@ -37,9 +38,14 @@ namespace Hyska_Dynamic_List
             return _array[index];
         }
 
-        public object[] GetAll()
+        public string GetAll()
         {
-            return _array;
+            string output = "";
+            foreach (var i in _array)
+            {
+                output += (i + ", ");
+            }
+            return output;
         }
 
         public IEnumerator GetEnumerator()
@@ -47,18 +53,19 @@ namespace Hyska_Dynamic_List
             return _array.GetEnumerator();
         }
 
-        int index;
         public int IndexOf(object o)
         {
-            for (int i = 0; i < _array.Length; i++)
+            for (var i = 0; i < Length; i++)
             {
-                if (_array[i] == o)
+                //Console.WriteLine(i+  "  Index");
+                //Console.WriteLine(o + "  Object");
+                if (object.Equals(o, Get(i)))
                 {
-                    index = i;
-                    break;
+                    return i;
                 }
+
             }
-            return index;
+            throw new ArgumentException("Objekt " + o + " se v array nenachazi");
         }
 
         public void Set(int index, object o)
@@ -67,57 +74,31 @@ namespace Hyska_Dynamic_List
             _array[index] = o;
         }
 
-        public void SetMove(ref object[] array, int index, object o)
+        public void SetMove(int index, object o)
         {
-            if (index < 0 || index > array.Length) throw new ArgumentOutOfRangeException("Index nesmí být větší nebo menší než pole");
-            Resize(ref array, Length + 1);
-            for(int i = 0; i < array.Length; i++)
-            {
-                if(i >= index)
-                {
-                    _array[i] = array[i + 1];
-                }
-            }
-            _array[index] = o;
+            ShiftItemsUp(index);
+            Set(index, o);
         }
 
         public void ClearValue(object o)
         {
-            for (int i = 0; i < _array.Length; i++)
-            {
-                if (_array[i] == o)
-                {
-                    _array[i] = null;
-                    continue;
-                }
-            }
+            Set(IndexOf(o), null);
         }
 
         public void ClearIndex(int index)
         {
-            if (index < 0 || index > _array.Length) throw new ArgumentOutOfRangeException("Index nesmí být větší nebo menší než pole");
-            _array[index] = null;
+            Set(index, null);
+        }
+
+        public void RemoveValue(object o)
+        {
+            int x = IndexOf(o);
+            ShiftItemsDown(x + 1);
         }
 
         public void RemoveIndex(int index)
         {
-            if (index < 0 || index > _array.Length) throw new ArgumentOutOfRangeException("Index nesmí být větší nebo menší než pole");
-            _array[index] = null;
-            for (int i = 0; i < _array.Length; i++)
-            {
-                if (i > index)
-                {
-                    _array[i - 1] = _array[i];
-                }
-            }
-
-            int newSize = (_array.Length - 1);
-            object[] newArray = new object[newSize];
-            for (int i = 0; i < Math.Min(_array.Length, newSize); i++)
-            {
-                newArray[i] = _array[i];
-            }
-            _array = newArray;
+            ShiftItemsDown(index + 1);
         }
 
         protected void Resize(ref object[] old, int newSize)
@@ -129,6 +110,46 @@ namespace Hyska_Dynamic_List
                 newArray[i] = old[i];
             }
             old = newArray;
+        }
+
+        public void ShiftItemsUp(int index, int size = 1)
+        {
+            Resize(ref _array, _array.Length + size);
+            //Console.WriteLine(this.Length + "   delka po resize");
+            //Console.WriteLine(this.GetAll() + "   array po resize");
+            object temp1 = Get(index);
+            object temp2;
+            for (var i = index; i < _array.Length - 1; i++)
+            {
+
+                temp2 = Get(i + 1);
+                Set(i + 1, temp1);
+                temp1 = temp2;
+
+            }
+
+        }
+
+        public void ShiftItemsDown(int index, int size = 1)
+        {
+            //Console.WriteLine(index + "index");
+            if (index < 0 || index >= Length+1)
+            {
+                throw new ArgumentOutOfRangeException("Out of range");
+            }
+
+            for (int i = index; i < _array.Length; i += 1)
+            {
+                //Console.WriteLine(i);
+                //Console.WriteLine(i - 1);
+                Set(i - 1, Get(i));
+            }
+            Resize(ref _array, _array.Length - size);
+        }
+
+        public override string ToString()
+        {
+            return "Flexible Array";
         }
     }
 }

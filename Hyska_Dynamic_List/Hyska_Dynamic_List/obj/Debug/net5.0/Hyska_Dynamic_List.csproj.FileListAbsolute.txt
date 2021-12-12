@@ -1,0 +1,16 @@
+F:\repos\FlexArray\Hyska_Dynamic_List\Hyska_Dynamic_List\bin\Debug\net5.0\Hyska_Dynamic_List.exe
+F:\repos\FlexArray\Hyska_Dynamic_List\Hyska_Dynamic_List\bin\Debug\net5.0\Hyska_Dynamic_List.deps.json
+F:\repos\FlexArray\Hyska_Dynamic_List\Hyska_Dynamic_List\bin\Debug\net5.0\Hyska_Dynamic_List.runtimeconfig.json
+F:\repos\FlexArray\Hyska_Dynamic_List\Hyska_Dynamic_List\bin\Debug\net5.0\Hyska_Dynamic_List.runtimeconfig.dev.json
+F:\repos\FlexArray\Hyska_Dynamic_List\Hyska_Dynamic_List\bin\Debug\net5.0\Hyska_Dynamic_List.dll
+F:\repos\FlexArray\Hyska_Dynamic_List\Hyska_Dynamic_List\bin\Debug\net5.0\ref\Hyska_Dynamic_List.dll
+F:\repos\FlexArray\Hyska_Dynamic_List\Hyska_Dynamic_List\bin\Debug\net5.0\Hyska_Dynamic_List.pdb
+F:\repos\FlexArray\Hyska_Dynamic_List\Hyska_Dynamic_List\obj\Debug\net5.0\Hyska_Dynamic_List.csproj.AssemblyReference.cache
+F:\repos\FlexArray\Hyska_Dynamic_List\Hyska_Dynamic_List\obj\Debug\net5.0\Hyska_Dynamic_List.GeneratedMSBuildEditorConfig.editorconfig
+F:\repos\FlexArray\Hyska_Dynamic_List\Hyska_Dynamic_List\obj\Debug\net5.0\Hyska_Dynamic_List.AssemblyInfoInputs.cache
+F:\repos\FlexArray\Hyska_Dynamic_List\Hyska_Dynamic_List\obj\Debug\net5.0\Hyska_Dynamic_List.AssemblyInfo.cs
+F:\repos\FlexArray\Hyska_Dynamic_List\Hyska_Dynamic_List\obj\Debug\net5.0\Hyska_Dynamic_List.csproj.CoreCompileInputs.cache
+F:\repos\FlexArray\Hyska_Dynamic_List\Hyska_Dynamic_List\obj\Debug\net5.0\Hyska_Dynamic_List.dll
+F:\repos\FlexArray\Hyska_Dynamic_List\Hyska_Dynamic_List\obj\Debug\net5.0\ref\Hyska_Dynamic_List.dll
+F:\repos\FlexArray\Hyska_Dynamic_List\Hyska_Dynamic_List\obj\Debug\net5.0\Hyska_Dynamic_List.pdb
+F:\repos\FlexArray\Hyska_Dynamic_List\Hyska_Dynamic_List\obj\Debug\net5.0\Hyska_Dynamic_List.genruntimeconfig.cache

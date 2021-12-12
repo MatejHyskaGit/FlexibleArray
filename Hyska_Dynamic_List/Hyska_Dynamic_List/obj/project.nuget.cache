@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "2NmAO89w7KPDYfY09G6qb0LZZ6mceHUJMqRwMx+2gmGc0BFzLMsJxMpRr0SSbuv7wRrIHn/l9A8CM7wDJiWaDA==",
+  "dgSpecHash": "QmAWesEsMcfw7VLkdbjwrwhKsFAUPeyhHZAPoV0KpTJRgZAd09N2c512FwSK0i7knSeHI5uAicKi95c1s4LdWg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\matej.hyska.020\\source\\repos\\Hyska_Dynamic_List\\Hyska_Dynamic_List\\Hyska_Dynamic_List.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "F:\\repos\\FlexArray\\Hyska_Dynamic_List\\Hyska_Dynamic_List\\Hyska_Dynamic_List.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Martin\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
+  ],
   "logs": []
 }
